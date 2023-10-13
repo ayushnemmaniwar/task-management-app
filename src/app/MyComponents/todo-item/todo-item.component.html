@@ -1,0 +1,10 @@
+<div class="container my-3">
+    <h6>{{todo.sno}}</h6>
+    <h3>{{todo.title}}</h3>
+    <p>{{todo.desc}}</p>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" (click)="onCheckBoxClick(todo)" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1" >Toggle Done</label>
+      </div>
+    <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+</div>

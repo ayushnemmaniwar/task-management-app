@@ -1,0 +1,9 @@
+<p>Add you Todo List</p>
+<form (ngSubmit)="onSubmit()">
+    <label for="fname">Title</label><br>
+    <input type="text" id="title" name="title" [(ngModel)]="title" value=""><br>
+    <label for="lname">Description</label><br>
+    <input type="text" id="desc" name="desc" [(ngModel)]="desc" value=""><br><br>
+    <input type="submit" value="Add Todod">
+  </form> 
+

@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <app-add-todo (toDoAdd)="addTodo($event)"></app-add-todo>
+    <table class="table table-bordered my-4">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Title</th>
+                <th>Desc</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <div *ngIf="todos.length==0; else elseBlock">
+            <h6>My todos are empty</h6>
+          </div>
+          <ng-template #elseBlock>
+            <div *ngFor="let todo of todos">
+                <app-todo-item [todo]="todo" (toToDelete)="deleteTodo($event)" (onCheckBox)="onCheckBoxClick($event)"></app-todo-item>
+            </div> 
+          </ng-template>
+            
+    </table>
+</div>
